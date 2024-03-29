@@ -12,7 +12,7 @@ from datetime import date
 from frappe.utils.oauth import get_oauth2_authorize_url, get_oauth_keys, login_via_oauth2, login_oauth_user as _login_oauth_user, redirect_post_login
 import json
 from frappe import _
-from frappe.integrations.doctype.ldap_settings.ldap_settings import get_ldap_settings
+# from frappe.integrations.doctype.ldap_settings.ldap_settings import get_ldap_settings
 
 no_cache = True
 
@@ -32,8 +32,8 @@ def get_context(context):
 			context["{provider}_login".format(provider=provider)] = get_oauth2_authorize_url(provider)
 			context["social_login"] = True
 
-	ldap_settings = get_ldap_settings()
-	context["ldap_settings"] = ldap_settings
+	# ldap_settings = get_ldap_settings()
+	# context["ldap_settings"] = ldap_settings
 
 	login_name_placeholder = [_("Email address")]
 
