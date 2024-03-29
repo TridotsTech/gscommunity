@@ -17,7 +17,7 @@ from frappe.utils.response import build_response
 from six.moves.urllib.parse import urlparse, urlencode
 from datetime import date,datetime,timedelta
 from cryptography.fernet import Fernet, InvalidToken 
-from frappe.email.doctype.newsletter.newsletter import schedule_newsletter
+# from frappe.email.doctype.newsletter.newsletter import schedule_newsletter
 
 @frappe.whitelist()
 def validate_members(first_name, email, mobile_no):
